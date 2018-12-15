@@ -1,17 +1,19 @@
 let mongoose = require('mongoose');
 
 const schema = {
-    name: { type: String, index:1 },
+    id: Number,
+    name: { type: String, index:1,required: true},
     age: Number,
-    status: { type: String, required:true },
-    group: [ String ]
+    team: String,
+    position: String,
+    gamesToSkip: Number,
+    cards: [ String ],
+    reasons: [ String ]
+
+
 };
 const user_schema = new mongoose.Schema(schema);
-const User = mongoose.model('User',user_schema);
+const Player = mongoose.model('punished_sportsman',user_schema);
 
 
-//
-// console.log(`required paths: ${user_schema.requiredPaths()}`);
-// console.log(`indexes: ${JSON.stringify(user_schema.indexes())}`);
-
-module.exports = User;
+module.exports = Player;

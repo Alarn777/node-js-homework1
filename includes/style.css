@@ -1,0 +1,358 @@
+/*p {*/
+    /*color: rebeccapurple;*/
+    /*}*/
+
+/*.body {*/
+    /*height: 1000px;*/
+    /*!*background-color: blueviolet;*!*/
+    /*background-image: -moz-linear-gradient(0deg, #4cd4e2 0%, #3e69ff 100%);*/
+    /*background-image: -webkit-linear-gradient(0deg, #4cd4e2 0%, #3e69ff 100%);*/
+    /*background-image: -ms-linear-gradient(0deg, #4cd4e2 0%, #3e69ff 100%);*/
+/*}*/
+
+
+
+
+/*header {*/
+    /*padding: 15px 0;*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*width: 100%;*/
+    /*border-bottom: 1px solid rgba(255, 255, 255, 0.15);*/
+/*}*/
+
+
+/*#wrapper {*/
+    /*margin: 0 auto ;*/
+    /*background-color: white;*/
+    /*width: 1000px;*/
+    /*height: 900px;*/
+/*}*/
+
+
+/* my green color is: #004D47 */
+
+
+* { margin: 0; padding: 0; }
+body {
+    background-color: lightgray;
+}
+h1 {
+    color: darkslategray;
+}
+h3 {
+    color: rgb(21,74,67);
+}
+p {
+    color: rgb(21,74,67);
+    /*My color of the background*/
+}
+
+
+pre {
+    margin: 10px auto;
+    overflow: auto;
+    color: white;
+    background: #000000;
+
+    font-size: 0.8rem;
+    font-family: Menlo, Monaco, monospace;
+    -moz-tab-size: 2;
+    -o-tab-size: 2;
+    tab-size: 2;
+    position: relative;
+    width: 300px;
+}
+
+pre[rel] {
+    padding-top: 10px;
+}
+
+pre[rel]:before {
+    content: attr(rel);
+    color:#000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #CCCCCC;
+    font-family: 'Gotham Rounded A', 'Gotham Rounded B', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    padding: 5px 0;
+    text-indent: 15px;
+}
+
+pre code {
+    font-family: Menlo, Monaco, monospace;
+    background: none;
+    padding: 10px;
+    white-space: pre;
+    overflow: auto;
+    display: block;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+.name {
+    color: white;
+    padding: 10px;
+}
+
+
+.info {
+    background-color: #004D47;
+    color: white;
+    position: relative;
+    text-align: left;
+
+}
+.info h3{
+    color: white;
+}
+.box {
+    width: 33.3%;
+    height: 500px;
+
+    position: relative;
+    float:left;
+    text-align: center;
+
+}
+.box p {
+    color: white;
+}
+
+.box a{
+    color: lightskyblue;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+.box a:link {
+    color: lightskyblue;
+}
+
+/* visited link */
+.box a:visited {
+    color: lightskyblue;
+}
+.box a:hover {
+    color: gray;
+}
+.box a:active {
+    color: darkgrey;
+}
+
+.box img {
+    height: 400px;
+    width: 300px;
+    position: relative;
+
+
+}
+
+
+
+
+
+ul.styled {
+    background: lightgray;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+.styled li {
+    color: gray;
+    display: inline-block;
+    padding: 0 20px;
+    left: 515px;
+    z-index: 129;
+    font-family: "Arial", serif;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: left;
+}
+.mylogo {
+    position: relative;
+    /*left: 30px;*/
+    top: 15px;
+    max-width: 50px;
+    width: auto;
+}
+.styled li a{
+    color: gray;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+.styled li a:link {
+    color: rgb(21,74,67);
+}
+
+/* visited link */
+.styled li a:visited {
+    color: rgb(21,74,67);;
+}
+.styled li a:hover {
+    color: white;
+}
+.styled li a:active {
+    color: white;
+}
+
+.body-top {
+    background-image: url("images/background_block.png");
+    background-size: cover;
+    opacity: 0.9;
+    filter: alpha(opacity=30);
+    text-align: center;
+}
+.body-top img{
+    max-width: 100%;
+    height: auto;
+}
+.button2{
+    display:inline-block;
+    padding:0.5em 3em;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin:0 0.3em 0.3em 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    /*text-transform:uppercase;*/
+    font-family:'Roboto',sans-serif;
+    font-weight:400;
+    color: white;
+    text-align:center;
+    transition: all 0.15s;
+}
+.button2:hover{
+    color: gray;
+    border:1px solid gray;
+}
+.button2:active{
+    color: gray;
+    border:1px solid gray;
+}
+@media all and (max-width:30em){
+     a.button2{
+        display:block;
+        margin:0.4em auto;
+    }
+}
+
+
+.my_info {
+    background: #bfbfbf;
+    padding: 1%;
+    text-align: center;
+}
+
+.languages {
+    margin: 5px;
+    text-align: center;
+
+}
+.languages ul {
+    margin: 5px;
+
+
+}
+.languages ul li {
+    margin: 5px;
+    color: gray;
+    display: inline-block;
+    padding: 0 30px;
+    left: 515px;
+    z-index: 129;
+    font-family: "Arial", serif;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: left;
+
+}
+
+.button {
+    position: sticky;
+    border-radius: 100px;
+    background-color: darkslategray;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 5px 1px;
+}
+.button:hover {
+    color: gray;
+}
+
+
+@media (max-width: 415px) {
+
+    ul.styled {
+        background: lightgray;
+        font-size: 15px;
+        color: #fff;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+        list-style: none;
+    }
+
+    .styled li {
+        color: gray;
+        display: inline-block;
+        padding: 0 0;
+        left: 515px;
+        z-index: 129;
+        font-family: "Arial", serif;
+        font-weight: bold;
+        line-height: 1;
+        text-align: left;
+    }
+
+    .mylogo {
+        position: absolute;
+
+        /*left: 30px;*/
+        top: 10px;
+        max-width: 30px;
+        width: auto;
+    }
+    .languages {
+        margin: 2px;
+    }
+
+    .languages ul li {
+        margin: 1px;
+        color: gray;
+        display: inline-block;
+        padding: 0 10px;
+        left: 515px;
+        z-index: 129;
+        font-family: "Arial", serif;
+        font-weight: bold;
+        line-height: 1.2;
+        text-align: left;
+    }
+}
+
+
+

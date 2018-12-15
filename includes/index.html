@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Rokitko</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <nav role="navigation">
+        <ul class="styled">
+            <li><a href="#" ><img class="mylogo" src="images/logo.png"></a></li>
+            <li><a href="/GetAllPunishments" >GetAllPunishments</a></li>
+            <li>|</li>
+            <li><a href="#" >GetPunishedById</a></li>
+            <li>|</li>
+            <li><a href="/GetAllPunishments" >GetAllPunishments</a></li>
+            <li>|</li>
+            <li><a href="https://github.com/Alarn777" target="_blank">My GitHub</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section class="body-top">
+        <h1 class="name">Punished Sportsman Database</h1>
+        <div class="info">
+            <div class="box">
+                <h3>Get all punished sportsman:</h3>
+                <p>Link example:</p>
+                <a href="/GetAllPunishments" >/GetAllPunishments</a>
+                <p>http verb: GET</p>
+                <pre rel="Returned Json example"><code class="language-json">
+                [
+                    {
+                        cards: [ 'Red', 'Yellow' ],
+                        reasons: [ 'Fall game', 'Takle' ],
+                        _id: 5c13b320e7179a2e2708dcfd,
+                        id: 1,
+                        name: 'Morano Alan',
+                        age: 27,
+                        team: 'Milan',
+                        position: 'Attack',
+                        gamesToSkip: 3
+                   },
+                    ...
+                </code></pre>
+            </div>
+            <div class="box">
+                <h3>Get punished sportsman by id:</h3>
+                <p>Link example:</p>
+                <a href="/GetPunishedById" >/GetPunishedById</a>
+                <p>http verb: POST</p>
+                <p>Expects key-value in POST "id=##"</p>
+                <pre rel="Returned Json example"><code class="language-json">
+                [
+                    {
+                        cards: [ 'Red', 'Yellow' ],
+                        reasons: [ 'Fall game', 'Takle' ],
+                        _id: 5c13b320e7179a2e2708dcfd,
+                        id: 1,
+                        name: 'Morano Alan',
+                        age: 27,
+                        team: 'Milan',
+                        position: 'Attack',
+                        gamesToSkip: 3
+                   }
+                ]
+                    ...
+                </code></pre>
+            </div>
+            <div class="box">
+                <h3>Get all punished sportsman by Cards and Reason:</h3>
+
+                <p>Link example:</p>
+                <a href="/GetPunishedByCardSAndReason" >/GetPunishedByCardSAndReason</a>
+                <p>http verb: POST/GET</p>
+                <p>Expects key-value in POST/GET "Cards=###", "Reason=###" </p>
+                <pre rel="Returned Json example"><code class="language-json">
+                [
+                    { cards: [ 'Red' ],
+                        reasons: [ 'Violence in game', 'Takle' ],
+                        _id: 5c147642e7179a2e27092b1c,
+                        id: 3,
+                        name: 'Gerardo Bedoya',
+                        age: 28,
+                        team: 'Cucuta Deportivo',
+                        position: 'Attack',
+                        gamesToSkip: 1
+                    },
+                    ...
+                </code></pre>
+            </div>
+
+
+        </div>
+        <a href="https://github.com/Alarn777/node-js-homework1" target="_blank" class="button2">href="My GitHub"</a>
+        <img src="images/background_bot.png">
+
+
+    </section>
+    <section class="my_info">
+        <h3>מיכאל רוקיטקו</h3>
+        <p>
+            <br>Third year student on the faculty of Software Engineering
+            <br>Involved in various projects including: WebDesign, IOT, Game design etc.
+            <br>26 years old, fluent in English,Hebrew,Russian and basic Japanese
+        </p>
+    </section>
+    <section class="languages">
+        <h3>Programming Languages</h3>
+        <ul >
+            <li><img src="images/logos/cpp.png" alt="cpp"></li>
+            <li><img src="images/logos/Swift_logo.png" alt="swift"></li>
+            <li><img src="images/logos/Python.png" alt="python"></li>
+            <li><img src="images/logos/html_5.png" alt="html5"></li>
+        </ul>
+    </section>
+</main>
+<footer>
+    <button class="button" onclick="window.location.href='https://www.facebook.com/alarn' ">Facebook</button>
+    <button class="button" onclick="window.location.href='mailto:alarn777@gmail.com' ">Email Me</button>
+</footer>
+</body>
