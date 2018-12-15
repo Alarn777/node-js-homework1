@@ -1,0 +1,24 @@
+{
+  "name": "punishments",
+  "version": "1.0.0",
+  "description": "punishments database for athlets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alarn777/node-js-homework1.git"
+  },
+  "author": "Michael Rokitko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alarn777/node-js-homework1/issues"
+  },
+  "homepage": "https://github.com/Alarn777/node-js-homework1#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.3.16",
+    "body-parser": "latest"
+  }
+}
