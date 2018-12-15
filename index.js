@@ -16,7 +16,6 @@ const options = {
     pass : DB_PASS
 };
 
-
 function runServer () {
     app.use(express.json());       // to support JSON-encoded bodies
     app.use(express.urlencoded({ extended: true })); // to support URL-encoded bodies
@@ -131,16 +130,7 @@ function runServer () {
 
 
 
-    app.listen(3000);
+    app.listen(process.env.PORT || 3000);
 }
-
-// function css(request, response) {
-//     if (request.url === '/styles.css') {
-//         response.writeHead(200, {'Content-type' : 'text/css'});
-//         var fileContents = fs.readFileSync('./views/styles.css', {encoding: 'utf8'});
-//         response.write(fileContents);
-//     }
-// }
-
 
 runServer();
