@@ -1,14 +1,12 @@
-var querystring = require('querystring');
-let mongoose = require('mongoose');
-let Player = require('./user.js');
-let consts = require('./user_data/user_data.js');
+// var querystring = require('querystring');
+// let mongoose = require('mongoose');
+// let Player = require('./user.js');
+// let consts = require('./user_data/user_data.js');
 var express = require('express');
 var app = express();
 var path = require('path');
 const bodyParser = require('body-parser');
 const func = require("./functions.js");
-
-const {MLAB_URL,DB_USER,DB_PASS} = consts;
 
 
 function runServer () {
@@ -29,7 +27,7 @@ function runServer () {
 
         }, (error) => {
             console.log(error);
-
+            res.json(error);
 
         });
     });
@@ -48,11 +46,12 @@ function runServer () {
         }
 
 
-        func.SetPunishedById(id, gamesToSkip).then((result) => {
+        func.SetGamesToSkipById(id, gamesToSkip).then((result) => {
             res.json(result);
 
         }, (error) => {
             console.log(error);
+            res.json(error);
         });
 
     });
@@ -68,6 +67,7 @@ function runServer () {
 
         }, (error) =>{
             console.log(error);
+            res.json(error);
         });
     });
 
@@ -96,8 +96,6 @@ function runServer () {
         });
 
     });
-
-
 
 
 

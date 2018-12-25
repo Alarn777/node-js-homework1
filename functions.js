@@ -34,8 +34,22 @@ exports.GetAllPunishments = () => {
 
 
 
-exports.SetPunishedById = (id,gamesToSkip) => {
+
+exports.SetGamesToSkipById = (id,gamesToSkip) => {
     return new Promise( (resolve, reject ) => {
+
+        if (isNaN(id)) {
+            reject("ID is not a numeric value!");
+            return;
+        }
+
+
+        if (isNaN(id)) {
+            reject("gamesToSkip is not a numeric value!");
+            return;
+        }
+
+
         Player.findOne({id: id}, function(err, teamData){
             if(teamData){
                 teamData.$set("gamesToSkip",gamesToSkip);
@@ -57,6 +71,19 @@ exports.SetPunishedById = (id,gamesToSkip) => {
 
 exports.GetPunishedByCardSAndReason = (card,reason) => {
     return new Promise( (resolve, reject ) => {
+        if(!isNaN(card))
+        {
+            reject("card is not a string value!");
+            return;
+        }
+
+
+        if(!isNaN(reason))
+        {
+            reject("reason is not a string value!");
+            return;
+        }
+
         Player.find({reasons: reason, cards: card}, (err, result) => {
             if (err)
                 reject(`error: ${err}`);
