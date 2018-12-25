@@ -1,7 +1,4 @@
-// var querystring = require('querystring');
-// let mongoose = require('mongoose');
-// let Player = require('./user.js');
-// let consts = require('./user_data/user_data.js');
+
 var express = require('express');
 var app = express();
 var path = require('path');
@@ -45,7 +42,6 @@ function runServer () {
             gamesToSkip = req.body.gamesToSkip;
         }
 
-
         func.SetGamesToSkipById(id, gamesToSkip).then((result) => {
             res.json(result);
 
@@ -56,11 +52,7 @@ function runServer () {
 
     });
 
-
     app.post('/GetPunishedByCardSAndReason', (req, res) => {
-
-
-
 
         func.GetPunishedByCardSAndReason(req.body.cards,req.body.reasons).then( (result) => {
             res.json(result);
@@ -70,8 +62,6 @@ function runServer () {
             res.json(error);
         });
     });
-
-
 
     app.get('/GetPunishedByCardSAndReason', (req, res) => {
 
@@ -86,8 +76,6 @@ function runServer () {
             reasons = req.query.reasons;
         }
 
-
-
         func.GetPunishedByCardSAndReason(cards,reasons).then( (result) => {
             res.json(result);
 
@@ -96,8 +84,6 @@ function runServer () {
         });
 
     });
-
-
 
     app.listen(process.env.PORT || 3000);
 }
