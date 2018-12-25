@@ -20,9 +20,9 @@
             <li><a href="#" ><img class="mylogo" src="images/logo.png"></a></li>
             <li><a href="/GetAllPunishments" >GetAllPunishments</a></li>
             <li>|</li>
-            <li><a href="#" >GetPunishedById</a></li>
+            <li><a href="#" >SetGamesToSkipById</a></li>
             <li>|</li>
-            <li><a href="/GetAllPunishments" >GetAllPunishments</a></li>
+            <li><a href="/GetPunishedByCardSAndReason" >GetPunishedByCardSAndReason</a></li>
             <li>|</li>
             <li><a href="https://github.com/Alarn777" target="_blank">My GitHub</a></li>
         </ul>
@@ -37,9 +37,14 @@
                 <p>Link example:</p>
                 <a href="/GetAllPunishments" >/GetAllPunishments</a>
                 <p>http verb: GET</p>
-                <pre rel="Returned Json example"><code class="language-json">
+                <pre rel="Returned json example"><code class="language-json">
                 [
                     {
+                        rank: {
+                            2016: 46,
+                            2017: 47,
+                            2018: 48
+                        },
                         cards: [ 'Red', 'Yellow' ],
                         reasons: [ 'Fall game', 'Takle' ],
                         _id: 5c13b320e7179a2e2708dcfd,
@@ -50,30 +55,40 @@
                         position: 'Attack',
                         gamesToSkip: 3
                    },
+
                     ...
                 </code></pre>
             </div>
             <div class="box">
-                <h3>Get punished sportsman by id:</h3>
+                <h3>Set amount of games for sportsman to skip by id:</h3>
                 <p>Link example:</p>
-                <a href="/GetPunishedById" >/GetPunishedById</a>
+
+                <form method="post" action="/SetGamesToSkipById" class="inline">
+                    <input type="hidden" name="extra_submit_param" value="extra_submit_value">
+                    <button type="submit" name="submit_param" value="submit_value" class="link-button">/SetGamesToSkipById</button>
+                </form>
                 <p>http verb: POST</p>
-                <p>Expects key-value in POST "id=##"</p>
-                <pre rel="Returned Json example"><code class="language-json">
+                <p>Expects key-value in POST "id=##","gamesToSkip=##" </p>
+                <p>By default will send POST "id=5","gamesToSkip=100" </p>
+                <pre rel="Returned json example"><code class="language-json">
                 [
                     {
-                        cards: [ 'Red', 'Yellow' ],
+                        rank: {
+                            2016: 63,
+                            2017: 34,
+                            2018: 76
+                        },
+                        cards: [ 'Red' ],
                         reasons: [ 'Fall game', 'Takle' ],
                         _id: 5c13b320e7179a2e2708dcfd,
-                        id: 1,
-                        name: 'Morano Alan',
+                        id: 5,
+                        name: 'Pep Guardiola',
                         age: 27,
-                        team: 'Milan',
-                        position: 'Attack',
-                        gamesToSkip: 3
+                        team: 'Dorados',
+                        position: 'Defensive midfielder',
+                        gamesToSkip: 100
                    }
                 ]
-                    ...
                 </code></pre>
             </div>
             <div class="box">
@@ -82,10 +97,17 @@
                 <p>Link example:</p>
                 <a href="/GetPunishedByCardSAndReason" >/GetPunishedByCardSAndReason</a>
                 <p>http verb: POST/GET</p>
-                <p>Expects key-value in POST/GET "Cards=###", "Reason=###" </p>
-                <pre rel="Returned Json example"><code class="language-json">
+                <p>Expects key-value in POST/GET "cards=###", "reasons=###" </p>
+                <p>By default will send GET "cards=Yellow", "reasons=Takle" </p>
+                <pre rel="Returned json example"><code class="language-json">
                 [
-                    { cards: [ 'Red' ],
+                    {
+                       rank: {
+                            2016: 51,
+                            2017: 41,
+                            2018: 13
+                        },
+                        cards: [ 'Red' ],
                         reasons: [ 'Violence in game', 'Takle' ],
                         _id: 5c147642e7179a2e27092b1c,
                         id: 3,
@@ -95,14 +117,13 @@
                         position: 'Attack',
                         gamesToSkip: 1
                     },
+
                     ...
                 </code></pre>
             </div>
-
-
         </div>
         <a href="https://github.com/Alarn777/node-js-homework1" target="_blank" class="button2">href="My GitHub"</a>
-        <img src="images/background_bot.png">
+        <img src="images/background_bot.png" alt="image_background">
 
 
     </section>
